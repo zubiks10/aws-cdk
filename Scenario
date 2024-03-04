@@ -9,3 +9,22 @@ Whenever a new object is uploaded to the S3 bucket,
 the Lambda function will be invoked to process the object.
 
 We'll use TypeScript as the programming language for defining our infrastructure using CDK.
+
+=============
+In this code:
+=============
+
+We import necessary CDK modules (aws-cdk-lib) and AWS constructs (aws-s3, aws-lambda, aws-lambda-event-sources) to define our infrastructure.
+
+We define a CDK stack called MyCdkStack that represents our AWS infrastructure.
+
+Inside the stack, we create an S3 bucket (MyBucket) and a Lambda function (MyLambdaFunction).
+
+The Lambda function is associated with an environment variable (BUCKET_NAME) containing the name of the S3 bucket.
+
+We grant the Lambda function permissions to read from and write to the S3 bucket.
+
+We configure the Lambda function to be triggered by S3 events of type OBJECT_CREATED.
+
+Finally, we instantiate our stack (MyCdkStack) and deploy it using the CDK CLI.
+
